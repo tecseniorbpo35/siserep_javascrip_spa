@@ -9,7 +9,6 @@ async function cargarVista(url, destino) {
   const res = await fetch(url);
   const html = await res.text();
 
-  // Verificamos si el elemento existe en el DOM
   const elemento = document.querySelector(destino);
   if (elemento) {
     console.log(`Elemento encontrado: ${destino}`);
@@ -31,7 +30,7 @@ async function cargarPlantilla() {
   await cargarVista('/view/components/aside1.html', '[data-component="aside1"]');
   await cargarVista('/view/components/aside2.html', '[data-component="aside2"]');
 
-  Router.init(); // Inicializa el enrutador
+  Router.init(); 
 }
 
 window.addEventListener('DOMContentLoaded', cargarPlantilla);

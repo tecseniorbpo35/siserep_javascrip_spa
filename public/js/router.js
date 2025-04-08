@@ -9,7 +9,7 @@ const Router = {
 
   init: function () {
     window.addEventListener('hashchange', this.handleRoute.bind(this));
-    this.handleRoute(); // Se llama para procesar la primera carga de la página
+    this.handleRoute(); 
   },
 
   handleRoute: function () {
@@ -18,7 +18,7 @@ const Router = {
     if (route) {
       route();
     } else {
-      this.routes['#/home'](); // Redirige a home si la ruta no existe
+      this.routes['#/home'](); 
     }
   },
 };
